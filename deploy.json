@@ -9,7 +9,7 @@
                     "branch": "main",
                     "deploy_on_push": true
                 },
-                "run_command": "php artisan migrate --force ; heroku-php-apache2 public/",
+                "run_command": "php artisan migrate --force ; heroku-php-nginx public/",
                 "envs": [
                     {
                         "key": "APP_NAME",
