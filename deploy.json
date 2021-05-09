@@ -48,7 +48,7 @@
                     },
                     {
                         "key": "DB_CONNECTION",
-                        "value": "pgsql"
+                        "value": "mysql"
                     },
                     {
                         "key": "DB_HOST",
@@ -244,7 +244,7 @@
                     },
                     {
                         "key": "DB_CONNECTION",
-                        "value": "pgsql"
+                        "value": "mysql"
                     },
                     {
                         "key": "DB_HOST",
