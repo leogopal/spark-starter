@@ -28,7 +28,7 @@
                     },
                     {
                         "key": "APP_DEBUG",
-                        "value": "false",
+                        "value": "true",
                         "scope": "RUN_TIME"
                     },
                     {
@@ -209,12 +209,12 @@
                 "envs": [
                     {
                         "key": "APP_NAME",
-                        "value": "Wave",
+                        "value": "SparkStarter",
                         "scope": "RUN_TIME"
                     },
                     {
                         "key": "APP_ENV",
-                        "value": "production",
+                        "value": "local",
                         "scope": "RUN_TIME"
                     },
                     {
@@ -224,7 +224,7 @@
                     },
                     {
                         "key": "APP_DEBUG",
-                        "value": "false",
+                        "value": "true",
                         "scope": "RUN_TIME"
                     },
                     {
