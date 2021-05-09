@@ -4,7 +4,7 @@ spec:
   - name: web
     git:
       branch: main
-      repo_clone_url: https://github.com/thedevdojo/wave.git
+      repo_clone_url: https://github.com/leogopal/spark-starter.git
     run_command: php artisan migrate --force ; heroku-php-apache2 public/
     envs:
     - key: APP_NAME
@@ -35,14 +35,14 @@ spec:
     - key: DB_HOST
       value: "35.209.157.186"
     - key: DB_PORT
-      value: ${wave-db.PORT}
+      value: "3306"
     - key: DB_DATABASE
-      value: dbbujuwyvzffvb
+      value: "dbbujuwyvzffvb"
     - key: DB_USERNAME
-      value: u6r2dc575p5c9
+      value: "u6r2dc575p5c9"
       type: SECRET
     - key: DB_PASSWORD
-      value: J@d3L3016108
+      value: "J@d3L3016108"
       type: SECRET
     # BROADCAST CACHE QUEUE
     - key: BROADCAST_DRIVER
@@ -159,14 +159,14 @@ spec:
     - key: DB_HOST
       value: "35.209.157.186"
     - key: DB_PORT
-      value: ${wave-db.PORT}
+      value: "3306"
     - key: DB_DATABASE
-      value: dbbujuwyvzffvb
+      value: "dbbujuwyvzffvb"
     - key: DB_USERNAME
-      value: u6r2dc575p5c9
+      value: "u6r2dc575p5c9"
       type: SECRET
     - key: DB_PASSWORD
-      value: J@d3L3016108
+      value: "J@d3L3016108"
       type: SECRET
   - name: storagelink
     kind: POST_DEPLOY

@@ -2,7 +2,7 @@ name: sparkkit
 services:
 - name: web
   github:
-    repo: leogopal/spark-starter
+    repo: https://github.com/leogopal/spark-starter.git
     branch: main
     deploy_on_push: true
   run_command: php artisan migrate --force ; heroku-php-apache2 public/
@@ -35,14 +35,14 @@ services:
   - key: DB_HOST
     value: "35.209.157.186"
   - key: DB_PORT
-    value: ${wave-db.PORT}
+    value: "3306"
   - key: DB_DATABASE
-    value: dbbujuwyvzffvb
+    value: "dbbujuwyvzffvb"
   - key: DB_USERNAME
-    value: u6r2dc575p5c9
+    value: "u6r2dc575p5c9"
     type: SECRET
   - key: DB_PASSWORD
-    value: J@d3L3016108
+    value: "J@d3L3016108"
     type: SECRET
   # BROADCAST CACHE QUEUE
   - key: BROADCAST_DRIVER
@@ -127,7 +127,7 @@ jobs:
 - name: migrate
   kind: POST_DEPLOY
   github:
-    repo: leogopal/spark-starter
+    repo: https://github.com/leogopal/spark-starter.git
     branch: main
     deploy_on_push: true
   run_command: php artisan migrate --seed ; php artisan storage:link
@@ -158,12 +158,12 @@ jobs:
   - key: DB_HOST
     value: "35.209.157.186"
   - key: DB_PORT
-    value: ${wave-db.PORT}
+    value: "3306"
   - key: DB_DATABASE
-    value: dbbujuwyvzffvb
+    value: "dbbujuwyvzffvb"
   - key: DB_USERNAME
-    value: u6r2dc575p5c9
+    value: "u6r2dc575p5c9"
     type: SECRET
   - key: DB_PASSWORD
-    value: J@d3L3016108
+    value: "J@d3L3016108"
     type: SECRET

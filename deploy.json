@@ -5,7 +5,7 @@
             {
                 "name": "web",
                 "github": {
-                    "repo": "leogopal/spark-starter",
+                    "repo": "https://github.com/leogopal/spark-starter.git",
                     "branch": "main",
                     "deploy_on_push": true
                 },
@@ -56,7 +56,7 @@
                     },
                     {
                         "key": "DB_PORT",
-                        "value": "${wave-db.PORT}"
+                        "value": "3306"
                     },
                     {
                         "key": "DB_DATABASE",
@@ -201,7 +201,7 @@
             {
                 "name": "migrate",
                 "github": {
-                    "repo": "leogopal/spark-starter",
+                    "repo": "https://github.com/leogopal/spark-starter.git",
                     "branch": "main",
                     "deploy_on_push": true
                 },
@@ -252,7 +252,7 @@
                     },
                     {
                         "key": "DB_PORT",
-                        "value": "${wave-db.PORT}"
+                        "value": "3306"
                     },
                     {
                         "key": "DB_DATABASE",
