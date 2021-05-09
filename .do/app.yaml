@@ -1,15 +1,15 @@
-name: wave
+name: sparkkit
 services:
 - name: web
   github:
     repo: leogopal/spark-starter
     branch: main
     deploy_on_push: true
-  run_command: php artisan migrate --force ; heroku-php-nginx public/
+  run_command: php artisan migrate --force ; heroku-php-apache2 public/
   envs:
   - key: APP_NAME
     scope: RUN_TIME
-    value:  Wave
+    value:  Sparkit
   - key: APP_ENV
     scope: RUN_TIME
     value: production
@@ -33,16 +33,16 @@ services:
   - key: DB_CONNECTION
     value: "mysql"
   - key: DB_HOST
-    value: ${wave-db.HOSTNAME}
+    value: "35.209.157.186"
   - key: DB_PORT
     value: ${wave-db.PORT}
   - key: DB_DATABASE
-    value: ${wave-db.DATABASE}
+    value: dbbujuwyvzffvb
   - key: DB_USERNAME
-    value: ${wave-db.USERNAME}
+    value: u6r2dc575p5c9
     type: SECRET
   - key: DB_PASSWORD
-    value: ${wave-db.PASSWORD}
+    value: J@d3L3016108
     type: SECRET
   # BROADCAST CACHE QUEUE
   - key: BROADCAST_DRIVER
@@ -123,17 +123,11 @@ services:
   - key: DO_SPACES_BUCKET
     scope: RUN_TIME
     value: "YOUR_DO_SPACES_BUCKET"
-databases:
-- engine: PG
-  name: wave-db
-  num_nodes: 1
-  size: db-s-dev-database
-  version: "12"
 jobs:
 - name: migrate
   kind: POST_DEPLOY
   github:
-    repo: thedevdojo/wave
+    repo: leogopal/spark-starter
     branch: main
     deploy_on_push: true
   run_command: php artisan migrate --seed ; php artisan storage:link
@@ -160,16 +154,16 @@ jobs:
     scope: RUN_TIME
     value: "debug"
   - key: DB_CONNECTION
-    value: "pgsql"
+    value: "mysql"
   - key: DB_HOST
-    value: ${wave-db.HOSTNAME}
+    value: "35.209.157.186"
   - key: DB_PORT
     value: ${wave-db.PORT}
   - key: DB_DATABASE
-    value: ${wave-db.DATABASE}
+    value: dbbujuwyvzffvb
   - key: DB_USERNAME
-    value: ${wave-db.USERNAME}
+    value: u6r2dc575p5c9
     type: SECRET
   - key: DB_PASSWORD
-    value: ${wave-db.PASSWORD}
+    value: J@d3L3016108
     type: SECRET
