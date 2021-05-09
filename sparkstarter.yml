@@ -1,0 +1,133 @@
+databases:
+- engine: PG
+  name: wave-db
+  version: "12"
+name: sparkstarter
+region: sfo
+services:
+- envs:
+  - key: APP_NAME
+    scope: RUN_AND_BUILD_TIME
+    value: sparkstarter
+  - key: APP_ENV
+    scope: RUN_AND_BUILD_TIME
+    value: production
+  - key: APP_KEY
+    scope: RUN_AND_BUILD_TIME
+    value: base64:UdAH2B63rlotjrkSSsj3Hppy4gbfr+OeHvtSdF9r9q8=
+  - key: APP_DEBUG
+    scope: RUN_AND_BUILD_TIME
+    value: "true"
+  - key: APP_URL
+    scope: RUN_AND_BUILD_TIME
+    value: ${APP_URL}
+  - key: LOG_CHANNEL
+    scope: RUN_AND_BUILD_TIME
+    value: stack
+  - key: LOG_LEVEL
+    scope: RUN_AND_BUILD_TIME
+    value: debug
+  - key: DB_CONNECTION
+    scope: RUN_AND_BUILD_TIME
+    value: pgsql
+  - key: DB_HOST
+    scope: RUN_AND_BUILD_TIME
+    value: ${wave-db.HOSTNAME}
+  - key: DB_PORT
+    scope: RUN_AND_BUILD_TIME
+    value: ${wave-db.PORT}
+  - key: DB_DATABASE
+    scope: RUN_AND_BUILD_TIME
+    value: ${wave-db.DATABASE}
+  - key: DB_USERNAME
+    scope: RUN_AND_BUILD_TIME
+    type: SECRET
+    value: EV[1:Pdkrre3TonXHj1rPlhQSlqkBrX6pw13J:DuzgI5WRue64InFVQw9Ti/lXT0Ch2GEX5368NuFXpXwPUuI=]
+  - key: DB_PASSWORD
+    scope: RUN_AND_BUILD_TIME
+    type: SECRET
+    value: EV[1:ioFI9cT7RWVWGkWpVDeTcLe4Ct0WVJSp:VB6IwBQrPfWeVhvl9hO5U8stgpr3Zy4IcWACJ5kk4PILJzs=]
+  - key: BROADCAST_DRIVER
+    scope: RUN_AND_BUILD_TIME
+    value: log
+  - key: CACHE_DRIVER
+    scope: RUN_AND_BUILD_TIME
+    value: file
+  - key: QUEUE_CONNECTION
+    scope: RUN_AND_BUILD_TIME
+    value: sync
+  - key: SESSION_DRIVER
+    scope: RUN_AND_BUILD_TIME
+    value: file
+  - key: SESSION_LIFETIME
+    scope: RUN_AND_BUILD_TIME
+    value: "120"
+  - key: MEMCACHED_HOST
+    scope: RUN_AND_BUILD_TIME
+    value: 127.0.0.1
+  - key: REDIS_HOST
+    scope: RUN_AND_BUILD_TIME
+    value: 127.0.0.1
+  - key: REDIS_PASSWORD
+    scope: RUN_AND_BUILD_TIME
+    value: "null"
+  - key: REDIS_PORT
+    scope: RUN_AND_BUILD_TIME
+    value: "6379"
+  - key: MAIL_MAILER
+    scope: RUN_AND_BUILD_TIME
+    value: smtp
+  - key: MAIL_HOST
+    scope: RUN_AND_BUILD_TIME
+    value: mailhog
+  - key: MAIL_PORT
+    scope: RUN_AND_BUILD_TIME
+    value: "1025"
+  - key: MAIL_USERNAME
+    scope: RUN_AND_BUILD_TIME
+    value: "null"
+  - key: MAIL_PASSWORD
+    scope: RUN_AND_BUILD_TIME
+    value: "null"
+  - key: key
+    scope: RUN_AND_BUILD_TIME
+    value: "null"
+  - key: MAIL_ENCRYPTION
+    scope: RUN_AND_BUILD_TIME
+    value: "null"
+  - key: MAIL_FROM_ADDRESS
+    scope: RUN_AND_BUILD_TIME
+    value: "null"
+  - key: MAIL_FROM_NAME
+    scope: RUN_AND_BUILD_TIME
+    value: ${APP_NAME}
+  - key: DO_SPACES
+    scope: RUN_AND_BUILD_TIME
+    value: "false"
+  - key: DO_SPACES_KEY
+    scope: RUN_AND_BUILD_TIME
+    type: SECRET
+    value: EV[1:xPUODVASEJuhBA7OG5Q5Lya1q5avQ5dU:18RW1MUg3pclFT/k565vrEAH383jdbAv/bslmTO2shVsbA==]
+  - key: DO_SPACES_SECRET
+    scope: RUN_AND_BUILD_TIME
+    type: SECRET
+    value: EV[1:DQps85lLtdEn5WLt+YWRWxhmcNzdQSSA:0dKT+bTOSDX6+L/DOnus0gA9VSzZpoS0Y3J2mGkz74uuxOHFnQ==]
+  - key: DO_SPACES_ENDPOINT
+    scope: RUN_AND_BUILD_TIME
+    value: YOUR_DO_SPACES_ENDPOINT
+  - key: DO_SPACES_REGION
+    scope: RUN_AND_BUILD_TIME
+    value: YOUR_DO_SPACES_REGION
+  - key: DO_SPACES_BUCKET
+    scope: RUN_AND_BUILD_TIME
+    value: YOUR_DO_SPACES_BUCKET
+  git:
+    branch: main
+    repo_clone_url: https://github.com/leogopal/sparkstarter.git
+  http_port: 8080
+  instance_count: 1
+  instance_size_slug: professional-s
+  name: web
+  routes:
+  - path: /
+  run_command: php artisan migrate --force ; heroku-php-apache2 public/
