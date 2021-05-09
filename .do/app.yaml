@@ -2,10 +2,10 @@ name: wave
 services:
 - name: web
   github:
-    repo: thedevdojo/wave
+    repo: leogopal/spark-starter
     branch: main
     deploy_on_push: true
-  run_command: php artisan migrate --force ; heroku-php-apache2 public/
+  run_command: php artisan migrate --force ; heroku-php-nginx public/
   envs:
   - key: APP_NAME
     scope: RUN_TIME
@@ -18,7 +18,7 @@ services:
     value: "base64:UdAH2B63rlotjrkSSsj3Hppy4gbfr+OeHvtSdF9r9q8="
   - key: APP_DEBUG
     scope: RUN_TIME
-    value: "false"
+    value: "true"
   - key: APP_URL
     scope: RUN_TIME
     value: ${APP_URL}
@@ -31,7 +31,7 @@ services:
     value: "debug"
   # DATABASE
   - key: DB_CONNECTION
-    value: "pgsql"
+    value: "mysql"
   - key: DB_HOST
     value: ${wave-db.HOSTNAME}
   - key: DB_PORT

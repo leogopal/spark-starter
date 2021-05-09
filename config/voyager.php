@@ -213,6 +213,14 @@ return [
         //'js/custom.js',
     ],
 
+    'allowed_mimetypes' => [
+        'image/jpeg',
+        'image/png',
+        'image/gif',
+        'image/bmp',
+        'video/mp4',
+   ],
+
     'googlemaps' => [
          'key'    => env('GOOGLE_MAPS_KEY', ''),
          'center' => [
