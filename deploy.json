@@ -5,11 +5,11 @@
             {
                 "name": "web",
                 "github": {
-                    "repo": "${wave.repo}",
+                    "repo": "leogopal/spark-starter",
                     "branch": "main",
                     "deploy_on_push": true
                 },
-                "run_command": "php artisan migrate --force ; heroku-php-nginx public/",
+                "run_command": "php artisan migrate --force ; heroku-php-apache2 public/",
                 "envs": [
                     {
                         "key": "APP_NAME",
@@ -52,7 +52,7 @@
                     },
                     {
                         "key": "DB_HOST",
-                        "value": "${wave-db.HOSTNAME}"
+                        "value": "35.209.157.186"
                     },
                     {
                         "key": "DB_PORT",
@@ -60,16 +60,16 @@
                     },
                     {
                         "key": "DB_DATABASE",
-                        "value": "${wave-db.DATABASE}"
+                        "value": "dbbujuwyvzffvb"
                     },
                     {
                         "key": "DB_USERNAME",
-                        "value": "${wave-db.USERNAME}",
+                        "value": "u6r2dc575p5c9",
                         "type": "SECRET"
                     },
                     {
                         "key": "DB_PASSWORD",
-                        "value": "${wave-db.PASSWORD}",
+                        "value": "J@d3L3016108",
                         "type": "SECRET"
                     },
                     {
@@ -201,7 +201,7 @@
             {
                 "name": "migrate",
                 "github": {
-                    "repo": "${wave.repo}",
+                    "repo": "leogopal/spark-starter",
                     "branch": "main",
                     "deploy_on_push": true
                 },
@@ -248,7 +248,7 @@
                     },
                     {
                         "key": "DB_HOST",
-                        "value": "${wave-db.HOSTNAME}"
+                        "value": "35.209.157.186"
                     },
                     {
                         "key": "DB_PORT",
@@ -256,16 +256,16 @@
                     },
                     {
                         "key": "DB_DATABASE",
-                        "value": "${wave-db.DATABASE}"
+                        "value": "dbbujuwyvzffvb"
                     },
                     {
                         "key": "DB_USERNAME",
-                        "value": "${wave-db.USERNAME}",
+                        "value": "u6r2dc575p5c9",
                         "type": "SECRET"
                     },
                     {
                         "key": "DB_PASSWORD",
-                        "value": "${wave-db.PASSWORD}",
+                        "value": "J@d3L3016108",
                         "type": "SECRET"
                     }
                 ],
@@ -274,7 +274,7 @@
         ],
         "databases": [
             {
-                "name": "wave-db"
+                "name": "dbbujuwyvzffvb"
             }
         ]
     }

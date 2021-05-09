@@ -31,24 +31,18 @@ spec:
       value: "debug"
     # DATABASE
     - key: DB_CONNECTION
-      scope: RUN_TIME
-      value: "pgsql"
+      value: "mysql"
     - key: DB_HOST
-      scope: RUN_TIME
-      value: ${wave-db.HOSTNAME}
+      value: "35.209.157.186"
     - key: DB_PORT
-      scope: RUN_TIME
       value: ${wave-db.PORT}
     - key: DB_DATABASE
-      scope: RUN_TIME
-      value: ${wave-db.DATABASE}
+      value: dbbujuwyvzffvb
     - key: DB_USERNAME
-      scope: RUN_TIME
-      value: ${wave-db.USERNAME}
+      value: u6r2dc575p5c9
       type: SECRET
     - key: DB_PASSWORD
-      scope: RUN_TIME
-      value: ${wave-db.PASSWORD}
+      value: J@d3L3016108
       type: SECRET
     # BROADCAST CACHE QUEUE
     - key: BROADCAST_DRIVER
@@ -135,7 +129,7 @@ spec:
   - name: migrate
     kind: POST_DEPLOY
     git:
-      repo_clone_url: https://github.com/thedevdojo/wave.git
+      repo_clone_url: https://github.com/leogopal/spark-starter.git
       branch: main
     run_command: php artisan migrate --seed
     envs:
@@ -161,28 +155,22 @@ spec:
       scope: RUN_TIME
       value: "debug"
     - key: DB_CONNECTION
-      scope: RUN_TIME
-      value: "pgsql"
+      value: "mysql"
     - key: DB_HOST
-      scope: RUN_TIME
-      value: ${wave-db.HOSTNAME}
+      value: "35.209.157.186"
     - key: DB_PORT
-      scope: RUN_TIME
       value: ${wave-db.PORT}
     - key: DB_DATABASE
-      scope: RUN_TIME
-      value: ${wave-db.DATABASE}
+      value: dbbujuwyvzffvb
     - key: DB_USERNAME
-      scope: RUN_TIME
-      value: ${wave-db.USERNAME}
+      value: u6r2dc575p5c9
       type: SECRET
     - key: DB_PASSWORD
-      scope: RUN_TIME
-      value: ${wave-db.PASSWORD}
+      value: J@d3L3016108
       type: SECRET
   - name: storagelink
     kind: POST_DEPLOY
     git:
-      repo_clone_url: https://github.com/thedevdojo/wave.git
+      repo_clone_url: https://github.com/leogopal/spark-starter.git
       branch: main
     run_command: php artisan storage:link
