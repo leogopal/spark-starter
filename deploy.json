@@ -13,7 +13,7 @@
                 "envs": [
                     {
                         "key": "APP_NAME",
-                        "value": "Wave",
+                        "value": "SparkCode",
                         "scope": "RUN_TIME"
                     },
                     {
@@ -201,11 +201,11 @@
             {
                 "name": "migrate",
                 "github": {
-                    "repo": "https://github.com/leogopal/spark-starter.git",
+                    "repo": "leogopal/spark-starter",
                     "branch": "main",
                     "deploy_on_push": true
                 },
-                "run_command": "php artisan migrate --seed ; php artisan storage:link",
+                "run_command": "php artisan migrate --seed; php artisan storage:link",
                 "envs": [
                     {
                         "key": "APP_NAME",
