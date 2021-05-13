@@ -2,7 +2,7 @@ name: sparkkit
 services:
 - name: web
   github:
-    repo: https://github.com/leogopal/spark-starter.git
+    repo: leogopal/spark-starter
     branch: main
     deploy_on_push: true
   run_command: php artisan migrate --force ; heroku-php-apache2 public/
@@ -127,7 +127,7 @@ jobs:
 - name: migrate
   kind: POST_DEPLOY
   github:
-    repo: https://github.com/leogopal/spark-starter.git
+    repo: leogopal/spark-starter
     branch: main
     deploy_on_push: true
   run_command: php artisan migrate --seed ; php artisan storage:link
