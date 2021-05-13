@@ -105,24 +105,24 @@ services:
   # Begin of DO VARS
   - key: DO_SPACES
     scope: RUN_TIME
-    value: "false"
+    value: "true"
   - key: DO_SPACES_KEY
     scope: RUN_TIME
-    value: "YOUR_DO_SPACES_KEY"
+    value: "VYU7N3WUGZQU2WEXMPKB"
     type: SECRET
   - key: DO_SPACES_SECRET
     scope: RUN_TIME
-    value: "YOUR_DO_SPACES_SECRET"
+    value: "Abm6EbKpp7u0xF7EanBFWfc8gJLUEOKxxV/bP11vjLw"
     type: SECRET
   - key: DO_SPACES_ENDPOINT
     scope: RUN_TIME
-    value: "YOUR_DO_SPACES_ENDPOINT"
+    value: "sfo3.digitaloceanspaces.com"
   - key: DO_SPACES_REGION
     scope: RUN_TIME
-    value: "YOUR_DO_SPACES_REGION"
+    value: "sfo3"
   - key: DO_SPACES_BUCKET
     scope: RUN_TIME
-    value: "YOUR_DO_SPACES_BUCKET"
+    value: "sparkcodespace"
 jobs:
 - name: migrate
   kind: POST_DEPLOY
@@ -167,4 +167,23 @@ jobs:
   - key: DB_PASSWORD
     value: "Radha_16108"
     type: SECRET
-
+    - key: DO_SPACES
+    scope: RUN_TIME
+    value: "true"
+  - key: DO_SPACES_KEY
+    scope: RUN_TIME
+    value: "VYU7N3WUGZQU2WEXMPKB"
+    type: SECRET
+  - key: DO_SPACES_SECRET
+    scope: RUN_TIME
+    value: "Abm6EbKpp7u0xF7EanBFWfc8gJLUEOKxxV/bP11vjLw"
+    type: SECRET
+  - key: DO_SPACES_ENDPOINT
+    scope: RUN_TIME
+    value: "sfo3.digitaloceanspaces.com"
+  - key: DO_SPACES_REGION
+    scope: RUN_TIME
+    value: "sfo3"
+  - key: DO_SPACES_BUCKET
+    scope: RUN_TIME
+    value: "sparkcodespace"  

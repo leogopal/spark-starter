@@ -164,29 +164,29 @@
                     },
                     {
                         "key": "DO_SPACES",
-                        "value": "false",
+                        "value": "true",
                         "scope": "RUN_TIME"
                     },
                     {
                         "key": "DO_SPACES_KEY",
-                        "value": "YOUR_DO_SPACES_KEY",
+                        "value": "VYU7N3WUGZQU2WEXMPKB",
                         "scope": "RUN_TIME",
                         "type": "SECRET"
                     },
                     {
                         "key": "DO_SPACES_SECRET",
-                        "value": "YOUR_DO_SPACES_SECRET",
+                        "value": "Abm6EbKpp7u0xF7EanBFWfc8gJLUEOKxxV/bP11vjLw",
                         "scope": "RUN_TIME",
                         "type": "SECRET"
                     },
                     {
                         "key": "DO_SPACES_ENDPOINT",
-                        "value": "YOUR_DO_SPACES_ENDPOINT",
+                        "value": "sfo3.digitaloceanspaces.com",
                         "scope": "RUN_TIME"
                     },
                     {
                         "key": "DO_SPACES_REGION",
-                        "value": "YOUR_DO_SPACES_REGION",
+                        "value": "sfo3",
                         "scope": "RUN_TIME"
                     },
                     {
