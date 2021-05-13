@@ -9,7 +9,7 @@ spec:
     envs:
     - key: APP_NAME
       scope: RUN_TIME
-      value:  Wave
+      value:  SparkCode
     - key: APP_ENV
       scope: RUN_TIME
       value: production
@@ -123,8 +123,6 @@ spec:
     - key: DO_SPACES_BUCKET
       scope: RUN_TIME
       value: "YOUR_DO_SPACES_BUCKET"
-  databases:
-  - name: wave-db
   jobs:
   - name: migrate
     kind: POST_DEPLOY

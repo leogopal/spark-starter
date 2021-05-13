@@ -9,7 +9,7 @@ services:
   envs:
   - key: APP_NAME
     scope: RUN_TIME
-    value:  Sparkit
+    value:  SparkCode
   - key: APP_ENV
     scope: RUN_TIME
     value: production
