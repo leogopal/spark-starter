@@ -52,7 +52,7 @@
                     },
                     {
                         "key": "DB_HOST",
-                        "value": "35.209.157.186"
+                        "value": "sparkcode.cxccedzzgjrb.us-east-2.rds.amazonaws.com"
                     },
                     {
                         "key": "DB_PORT",
@@ -60,16 +60,16 @@
                     },
                     {
                         "key": "DB_DATABASE",
-                        "value": "dbbujuwyvzffvb"
+                        "value": "sparkcodedb"
                     },
                     {
                         "key": "DB_USERNAME",
-                        "value": "u6r2dc575p5c9",
+                        "value": "leogopal",
                         "type": "SECRET"
                     },
                     {
                         "key": "DB_PASSWORD",
-                        "value": "J@d3L3016108",
+                        "value": "Radha_16108",
                         "type": "SECRET"
                     },
                     {
@@ -248,7 +248,7 @@
                     },
                     {
                         "key": "DB_HOST",
-                        "value": "35.209.157.186"
+                        "value": "sparkcode.cxccedzzgjrb.us-east-2.rds.amazonaws.com"
                     },
                     {
                         "key": "DB_PORT",
@@ -256,16 +256,16 @@
                     },
                     {
                         "key": "DB_DATABASE",
-                        "value": "dbbujuwyvzffvb"
+                        "value": "sparkcodedb"
                     },
                     {
                         "key": "DB_USERNAME",
-                        "value": "u6r2dc575p5c9",
+                        "value": "leogopal",
                         "type": "SECRET"
                     },
                     {
                         "key": "DB_PASSWORD",
-                        "value": "J@d3L3016108",
+                        "value": "Radha_16108",
                         "type": "SECRET"
                     }
                 ],
@@ -274,7 +274,7 @@
         ],
         "databases": [
             {
-                "name": "dbbujuwyvzffvb"
+                "name": "sparkcodedb"
             }
         ]
     }
