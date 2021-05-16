@@ -23,9 +23,9 @@ class UsersTableSeeder extends Seeder
             array (
                 'id' => 1,
                 'role_id' => 1,
-                'name' => 'Wave Admin',
-                'email' => 'admin@admin.com',
-                'username' => 'admin',
+                'name' => 'Leo Gopal',
+                'email' => 'leo@leogopal.com',
+                'username' => 'leogopal',
                 'avatar' => 'users/default.png',
                 'password' => '$2y$10$L8MjmjVVOCbyLHbp7pq/9.1ZEEa5AqE67ZXLd2M4.res05a3Rz/G2',
                 'remember_token' => '4oXDVo48Lm1pc4j7NkWI9cMO4hv5OIEJFMrqjSCKQsIwWMGRFYDvNpdioBfo',
